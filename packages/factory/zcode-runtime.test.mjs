@@ -80,6 +80,8 @@ test("leaves fenced, quoted, incomplete, partly given and non-system copies alon
   const inputs = [
     "Reference:\n\n```\n\n" + env + "```",
     "Reference:\n\n~~~\n\n" + env + "~~~",
+    // a complete paragraph, blank lines on both sides, inside a fence
+    "Reference:\n\n```\n\n" + env + "\n```",
     "Reference:\n\n> " + env.replace(/\n/g, "\n> "),
     prefix + env.replace("- You are powered by the model named magpie/factory/kimi-k3.\n", ""),
     prefix + partly,
